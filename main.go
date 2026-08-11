@@ -3,7 +3,17 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello there! I'm a Go program!")
-	fmt.Print("1, ")
-	fmt.Print("2\n")
+	fmt.Println("\nHello there! I'm a Go program!")
+	fmt.Print("I like the green color\n")
+	fmt.Println("Today is the 11 of August 2026\n")
+	
+	
+	fmt.Print("Happy New 2027 Year!\n")
+	fmt.Println("     *   ")
+	fmt.Println("    ***   ")
+	fmt.Println("   *****   ")
+	fmt.Println("  *******   ")
+	fmt.Println(" *********   ")
+	fmt.Println("***********   ")
+	fmt.Println("    |||\n   ")
 }
