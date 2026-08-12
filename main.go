@@ -17,12 +17,22 @@ func main() {
 	// fmt.Println("***********   ")
 	// fmt.Println("    |||\n   ")
 
-	var a int
-	var b float32
-	var c float64
-	var d string
-	var e bool
-	fmt.Println(a, b , c, d, e)
+	// var a int
+	// var b float32
+	// var c float64
+	// var d string
+	// var e bool
+	// fmt.Println(a, b , c, d, e)
+
+	// count := 9
+	// price :=12.5
+	// total := float64 (count)*price
+	// fmt.Println("Count: ", count)
+	// fmt.Println("Price: ", price)
+	// fmt.Println("Total: ", total)
+
+	const pi = 3.14
+	fmt.Println("Pi: ", pi)
 
 	
 }
