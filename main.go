@@ -32,7 +32,9 @@ func main() {
 	// fmt.Println("Total: ", total)
 
 	const pi = 3.14
-	fmt.Println("Pi: ", pi)
-
+	fmt.Println("Pi constant: ", pi)
 	
+	// checking seconds in the week
+	fmt.Println("Seconds in a week: ", 7*24*60*60)
+
 }
