@@ -37,4 +37,9 @@ func main() {
 	// checking seconds in the week
 	fmt.Println("Seconds in a week: ", 7*24*60*60)
 
+	fmt.Println("My friends kandy: ", 137/8)
+	fmt.Println("Only my kandy: ", 137%8)
+	
+	f_temp := 98.6
+	fmt.Println("Celsium temperature: ", ((f_temp -32)*5)/9)
 }
