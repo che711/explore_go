@@ -751,18 +751,23 @@ fmt.Println(x * 3)    // 3.3000000000000003</code></pre></div>
 <h3>2.1 Printf: печать по шаблону</h3>
 <p><code class="i">Println</code> печатает всё через пробел и годится для отладки. Но когда нужен контроль над видом — берут <code class="i">Printf</code> (print formatted). Ему дают шаблон с «дырками», а потом значения, которые в эти дырки вставятся.</p>
 <div class="codewrap"><div class="codebar"><span>main.go</span><button class="copy">копировать</button></div><pre><code class="go">name := "Аня"
-score := 25
-avg := 8.6667
+tasks := 3
+score := 26
+total := tasks * 10
 
-fmt.Printf("%s набрала %d очков\n", name, score)
+avg := float64(score) / float64(tasks)
+percent := score * 100 / total
+
+fmt.Printf("%s набрала %d очков из %d\n", name, score, total)
 fmt.Printf("Средний балл: %.2f\n", avg)
-fmt.Printf("Проценты: %d%%\n", 80)</code></pre></div>
-<div class="out">Аня набрала 25 очков
+fmt.Printf("Выполнено: %d%%\n", percent)</code></pre></div>
+<div class="out">Аня набрала 26 очков из 30
 Средний балл: 8.67
-Проценты: 80%</div>
+Выполнено: 86%</div>
+<p>В строке <code class="i">score * 100 / total</code> прячутся сразу два подвоха из главы 1.5. Порядок: сначала умножаем, потом делим — если написать <code class="i">score / total * 100</code>, получится <code class="i">0</code>, потому что целое <code class="i">26 / 30</code> обнуляется ещё до умножения. И результат целый: точные 86,67% превращаются в <code class="i">86</code>, остаток отбрасывается.</p>
 <table>
 <tr><th>Дырка</th><th>Для чего</th></tr>
-<tr><td><code>%d</code></td><td>Целое число (digit)</td></tr>
+<tr><td><code>%d</code></td><td>Целое число в десятичной записи (decimal)</td></tr>
 <tr><td><code>%s</code></td><td>Строка</td></tr>
 <tr><td><code>%f</code></td><td>Дробное число. <code>%.2f</code> — с двумя знаками после точки</td></tr>
 <tr><td><code>%t</code></td><td><code>true</code> / <code>false</code></td></tr>
@@ -958,7 +963,7 @@ func main() {
 <div class="opt" data-ok="1">2.2</div>
 <div class="opt" data-ok="0">2.25</div>
 <div class="opt" data-ok="0">2.3</div>
-<div class="expl">Округление до одного знака. Тонкость: 2.25 в двоичном виде хранится чуть меньше настоящей 2.25, поэтому получается 2.2, а не 2.3. С дробными числами такое случается — не пугайся.</div>
+<div class="expl">Округление до одного знака. Тонкость: 2.25 — ровно половина, и в таких случаях Go округляет к чётной цифре, поэтому получается 2.2, а не 2.3. А вот у 2.35 или 0.15 причина другая: они в двоичном виде хранятся чуть-чуть не такими, как записаны, и результат может уехать в любую сторону (2.35 → 2.4, а 0.15 → 0.1). С дробными числами такое случается — не пугайся.</div>
 </div>
 
 <label class="mark"><input type="checkbox" data-ch="c2"> Главу прошёл</label>
