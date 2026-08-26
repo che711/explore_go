@@ -43,19 +43,20 @@ func main() {
 	// f_temp := 98.6
 	// fmt.Println("Celsium temperature: ", ((f_temp-32)*5)/9)
 
-	// score := 10;
 	var score int;
-	fmt.Println("My score is: ", score);
 	score = 7;
-	fmt.Println("My score_2 is: ", score);
-
+	fmt.Println("My score is: ", score);
+	
 	name := "Ann";
 	avg := 8.667;
-
-	fmt.Printf("%s gets%.3f points\n", name, avg);
+	fmt.Printf("%s gets %.3f points\n", name, avg);
 	fmt.Printf("Avg degree: %.2f\n", avg);
 	fmt.Printf("Percentage: %d%%\n", int(avg*10));
 
+	msg := fmt.Sprintf("Player %s, level %d", name, score);
+	// msg := fmt.Sprintf("Игрок %s, уровень %d", "Аня", 7)
 
-
+	fmt.Println(msg);
+	fmt.Println(len(msg), "bytes long");
 }
+н
