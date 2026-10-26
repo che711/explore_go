@@ -59,11 +59,18 @@ func main() {
 	// fmt.Println(msg)
 	// fmt.Println(len(msg), "bytes long")
 
-	var name string
-	fmt.Print("Enter your name: ")
-	fmt.Scanf("%s", &name)
-	fmt.Printf("Hello, %s!\n", name)
+	// var name string
+	// fmt.Print("Enter your name: ")
+	// fmt.Scanf("%s", &name)
+	// fmt.Printf("Hello, %s!\n", name)
+
+	var age int
+	fmt.Print("Please enter your age: \n")
+	fmt.Scanln(&age)
+	fmt.Printf("In 10 years, you will be %d\n", age+10)
 	
+	
+
 }
 
 
