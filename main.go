@@ -69,7 +69,6 @@ func main() {
 	fmt.Scanln(&age)
 	fmt.Printf("In 10 years, you will be %d\n", age+10)
 	
-	
 
 }
 
